@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dialogueSuppressionVehicule</class>
+ <widget class="QDialog" name="dialogueSuppressionVehicule">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>416</width>
+    <height>109</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Supression d'un véhicule</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: #dce3ec;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="nivLabel">
+       <property name="font">
+        <font>
+         <family>Ubuntu Sans Mono</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>NIV du véhicule à retirer :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="nivLineEdit">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #f6f8fa;
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 6px 10px;
+}</string>
+       </property>
+       <property name="placeholderText">
+        <string>Entrez un NIV valide</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #F2F2F2;   /* Blanc-gris */
+    color: #333333;
+    border-radius: 8px;
+    padding: 6px 14px;
+    border: 1px solid #D0D0D0;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #E6E6E6;   /* Gris un peu plus foncé */
+}
+
+QPushButton:pressed {
+    background-color: #D9D9D9;   /* Encore un peu plus foncé */
+}
+
+QPushButton:disabled {
+    background-color: #E0E0E0;
+    color: #A0A0A0;
+    border: 1px solid #C8C8C8;
+}</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>dialogueSuppressionVehicule</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>dialogueSuppressionVehicule</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nivLineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>dialogueSuppressionVehicule</receiver>
+   <slot>mettreAJourBoutonOk()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>mettreAJourBoutonOk()</slot>
+ </slots>
+</ui>

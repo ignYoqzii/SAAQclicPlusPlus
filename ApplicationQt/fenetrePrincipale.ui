@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fenetrePrincipale</class>
+ <widget class="QMainWindow" name="fenetrePrincipale">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>993</width>
+    <height>699</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SAAQclic++</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #dce3ec;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget {
+    background-color: #dce3ec;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 2px 0 2px 0;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #C8C8C8;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #A0A0A0;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: transparent;
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <item row="0" column="2">
+     <widget class="QLabel" name="consoleLabel">
+      <property name="font">
+       <font>
+        <family>Ubuntu Sans Mono</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f6f8fa;
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+       </string>
+      </property>
+      <property name="text">
+       <string>Console (Terminal) :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QTextEdit" name="zoneAffichageConsole">
+      <property name="font">
+       <font>
+        <family>Ubuntu Sans Mono</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 6px 10px;
+    background-color: #f6f8fa;
+}</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Charger le dossier d'un propriétaire ou inscrivez-vous pour commencer.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="bonjourLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu Sans Mono</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: #f6f8fa;
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 6px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bienvenue sur SAAQclic++ !&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Qu'attendez-vous ? Inscrivez-vous maintenant !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="villeLabel">
+        <property name="font">
+         <font>
+          <family>Ubuntu Sans Mono</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: #f6f8fa;
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 6px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Ville de domicile : N/A</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="vehiculesLabel">
+        <property name="font">
+         <font>
+          <family>Ubuntu Sans Mono</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: #f6f8fa;
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 6px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Vos véhicules :</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTreeWidget" name="listeVehicules">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu Sans Mono</family>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTreeWidget {
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f6f8fa;
+}
+
+QTreeWidget::item {
+    padding: 8px 12px;
+	border-bottom: 1px solid #EEEEEE;
+    font-size: 14px;
+}
+
+QTreeWidget::item:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+}</string>
+        </property>
+        <property name="showDropIndicator" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::NoSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectItems</enum>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="animated">
+         <bool>true</bool>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string notr="true">1</string>
+         </property>
+        </column>
+        <item>
+         <property name="text">
+          <string>Aucun propriétaire n'est enregistré.</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="paiementTotalLabel">
+        <property name="font">
+         <font>
+          <family>Ubuntu Sans Mono</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: #f6f8fa;
+    border: 1px solid #BBBBBB;
+    border-radius: 10px;
+    padding: 6px 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Paiement total : N/A</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>993</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu Sans Mono</family>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+    background: white;
+    color: #333;
+    padding: 4px;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 6px 10px;
+}
+
+QMenuBar::item:selected {
+    background: #E6E6E6;
+    border-radius: 4px;
+}
+
+QMenu {
+    background: #FFFFFF;
+    color: #333;
+    border: 1px solid #CFCFCF;
+}
+
+QMenu::item:selected {
+    background: #E6E6E6;
+}</string>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionCharger_un_propri_taire"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuV_hicule">
+    <property name="title">
+     <string>Véhicule</string>
+    </property>
+    <widget class="QMenu" name="menuAjouter_un_v_hicule">
+     <property name="title">
+      <string>Ajouter un véhicule</string>
+     </property>
+     <addaction name="actionV_hicule_de_promenade"/>
+     <addaction name="actionCamion"/>
+    </widget>
+    <addaction name="menuAjouter_un_v_hicule"/>
+    <addaction name="actionSupprimer_un_v_hicule"/>
+   </widget>
+   <widget class="QMenu" name="menuPropri_taire">
+    <property name="title">
+     <string>Propriétaire</string>
+    </property>
+    <addaction name="actionInscription"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuPropri_taire"/>
+   <addaction name="menuV_hicule"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">QStatusBar {
+	background-color: #f6f8fa;
+}</string>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolBar {
+    background: #f6f8fa;
+    border-bottom: 1px solid #D0D0D0;
+    spacing: 4px;
+    padding: 4px;
+}
+
+QToolBar::separator {
+    background: #D0D0D0;
+    width: 1px;
+    margin: 4px;
+}
+
+QToolButton {
+    background: transparent;
+    color: #333;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+QToolButton:hover {
+    background: #E6E6E6;
+}
+
+QToolButton:pressed {
+    background: #DADADA;
+}</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionCharger_un_propri_taire"/>
+   <addaction name="separator"/>
+   <addaction name="actionSupprimer_un_v_hicule"/>
+   <addaction name="actionAjouter_un_v_hicule_de_promenade"/>
+   <addaction name="actionAjouter_un_camion"/>
+  </widget>
+  <action name="actionCharger_un_propri_taire">
+   <property name="text">
+    <string>Charger un propriétaire</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_un_v_hicule">
+   <property name="text">
+    <string>Supprimer un véhicule</string>
+   </property>
+  </action>
+  <action name="actionV_hicule_de_promenade">
+   <property name="text">
+    <string>Véhicule de promenade</string>
+   </property>
+  </action>
+  <action name="actionCamion">
+   <property name="text">
+    <string>Camion</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionInscription">
+   <property name="text">
+    <string>Inscription</string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_v_hicule_de_promenade">
+   <property name="text">
+    <string>Ajouter un véhicule de promenade</string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_camion">
+   <property name="text">
+    <string>Ajouter un camion</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered()</signal>
+   <receiver>fenetrePrincipale</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCharger_un_propri_taire</sender>
+   <signal>triggered()</signal>
+   <receiver>fenetrePrincipale</receiver>
+   <slot>chargerProprietaire()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionInscription</sender>
+   <signal>triggered()</signal>
+   <receiver>fenetrePrincipale</receiver>
+   <slot>inscrireProprietaire()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCamion</sender>
+   <signal>triggered()</signal>
+   <receiver>fenetrePrincipale</receiver>
+   <slot>ajouterCamion()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionV_hicule_de_promenade</sender>
+   <signal>triggered()</signal>
+   <receiver>fenetrePrincipale</receiver>
+   <slot>ajouterVehiculePromenade()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSupprimer_un_v_hicule</sender>
+   <signal>triggered()</signal>
+   <receiver>fenetrePrincipale</receiver>
+   <slot>supprimerVehicule()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAjouter_un_v_hicule_de_promenade</sender>
+   <signal>triggered()</signal>
+   <receiver>fenetrePrincipale</receiver>
+   <slot>ajouterVehiculePromenade()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAjouter_un_camion</sender>
+   <signal>triggered()</signal>
+   <receiver>fenetrePrincipale</receiver>
+   <slot>ajouterCamion()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>chargerProprietaire()</slot>
+  <slot>inscrireProprietaire()</slot>
+  <slot>ajouterVehiculePromenade()</slot>
+  <slot>ajouterCamion()</slot>
+  <slot>supprimerVehicule()</slot>
+ </slots>
+</ui>

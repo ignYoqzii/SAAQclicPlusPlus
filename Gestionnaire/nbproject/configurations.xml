@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>include/classes/Camion.h</itemPath>
+      <itemPath>include/contrat/ContratException.h</itemPath>
+      <itemPath>include/classes/Proprietaire.h</itemPath>
+      <itemPath>include/classes/Vehicule.h</itemPath>
+      <itemPath>include/exceptions/VehiculeAbsentException.h</itemPath>
+      <itemPath>include/exceptions/VehiculeDejaPresentException.h</itemPath>
+      <itemPath>include/exceptions/VehiculeException.h</itemPath>
+      <itemPath>include/classes/VehiculePromenade.h</itemPath>
+      <itemPath>include/utilitaire/taxesImmatriculationVPQc.h</itemPath>
+      <itemPath>include/utilitaire/validationFormat.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>src/classes/Camion.cpp</itemPath>
+      <itemPath>src/contrat/ContratException.cpp</itemPath>
+      <itemPath>src/classes/Proprietaire.cpp</itemPath>
+      <itemPath>src/classes/Vehicule.cpp</itemPath>
+      <itemPath>src/exceptions/VehiculeAbsentException.cpp</itemPath>
+      <itemPath>src/exceptions/VehiculeDejaPresentException.cpp</itemPath>
+      <itemPath>src/exceptions/VehiculeException.cpp</itemPath>
+      <itemPath>src/classes/VehiculePromenade.cpp</itemPath>
+      <itemPath>src/utilitaire/taxesImmatriculationVPQc.cpp</itemPath>
+      <itemPath>src/utilitaire/validationFormat.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f1"
+                     displayName="TesteurCamion"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/Camion_Testeur.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3"
+                     displayName="TesteurProprietaire"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/Proprietaire_Testeur.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="TesteurVehicule"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/Vehicule_Testeur.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="TesteurVehiculePromenade"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/VehiculePromenade_Testeur.cpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
+          <warningLevel>2</warningLevel>
+        </ccTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <folder path="TestFiles">
+        <ccTool>
+          <incDir>
+            <pElem>/usr/src/gtest/include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>gtest_main</linkerLibLibItem>
+            <linkerLibLibItem>gtest</linkerLibLibItem>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f3">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+        </linkerTool>
+      </folder>
+      <item path="include/classes/Camion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/classes/Proprietaire.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/classes/Vehicule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/classes/VehiculePromenade.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/contrat/ContratException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/exceptions/VehiculeAbsentException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/exceptions/VehiculeDejaPresentException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/exceptions/VehiculeException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/utilitaire/taxesImmatriculationVPQc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/utilitaire/validationFormat.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/classes/Camion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/classes/Proprietaire.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/classes/Vehicule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/classes/VehiculePromenade.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/contrat/ContratException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/exceptions/VehiculeAbsentException.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/exceptions/VehiculeDejaPresentException.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/exceptions/VehiculeException.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/utilitaire/taxesImmatriculationVPQc.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/utilitaire/validationFormat.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/Camion_Testeur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/Proprietaire_Testeur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/VehiculePromenade_Testeur.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/Vehicule_Testeur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NDEBUG</Elem>
+          </preprocessorList>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f3">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+        </linkerTool>
+      </folder>
+      <item path="include/classes/Camion.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/classes/Proprietaire.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/classes/Vehicule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/classes/VehiculePromenade.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/contrat/ContratException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/exceptions/VehiculeAbsentException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/exceptions/VehiculeDejaPresentException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/exceptions/VehiculeException.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/utilitaire/taxesImmatriculationVPQc.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="include/utilitaire/validationFormat.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/classes/Camion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/classes/Proprietaire.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/classes/Vehicule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/classes/VehiculePromenade.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/contrat/ContratException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/exceptions/VehiculeAbsentException.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/exceptions/VehiculeDejaPresentException.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/exceptions/VehiculeException.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/utilitaire/taxesImmatriculationVPQc.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/utilitaire/validationFormat.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/Camion_Testeur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/Proprietaire_Testeur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/VehiculePromenade_Testeur.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/Vehicule_Testeur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
